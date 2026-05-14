@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Влияние погодных условий на историю</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0b1220;
+color:white;
+overflow-x:hidden;
+}
+
+/* 🌲 ФОН */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+z-index:-2;
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:16px 10px;
+background:rgba(10,15,25,0.78);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+font-size:1.5rem;
+color:#ffd166;
+margin-bottom:4px;
+}
+
+header p{
+font-size:0.9rem;
+color:#cbd5e1;
+max-width:850px;
+margin:auto;
+}
+
+/* КНОПКИ */
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:10px;
+}
+
+nav button{
+padding:10px 14px;
+border:none;
+border-radius:10px;
+background:#ef4444;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.25s;
+}
+
+nav button:hover{
+transform:scale(1.07);
+background:#ff6b6b;
+}
+
+/* СЕКЦИИ */
+.section{
+display:none;
+max-width:1100px;
+margin:auto;
+padding:25px;
+animation:fade 0.5s ease;
+}
+
+.section.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(15px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* КАРТОЧКИ */
+.card{
+background:rgba(255,255,255,0.08);
+border-radius:18px;
+overflow:hidden;
+margin-bottom:25px;
+backdrop-filter:blur(6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:340px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card-content h2{
+color:#ffd166;
+margin-bottom:10px;
+font-size:1.3rem;
+}
+
+.card-content p{
+line-height:1.8;
+color:#e5e7eb;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Влияние погодных условий на историю</h1>
+<p>Как климат и природа меняли ход исторических событий</p>
+
+<nav>
+<button onclick="show('ancient')">Древний мир</button>
+<button onclick="show('middle')">1500–1900</button>
+<button onclick="show('ww')">Мировые войны</button>
+</nav>
+</header>
+
+<!-- 🌍 ДРЕВНИЙ МИР -->
+<div id="ancient" class="section active">
+
+<div class="card">
+<img src="punic.jpg">
+<div class="card-content">
+<h2>Пунические войны</h2>
+<p>
+Пунические войны между Римом и Карфагеном проходили в условиях, где погода играла огромную роль.
+Морские штормы часто разрушали целые флоты и меняли стратегические планы командующих.
+Даже сильные армии не могли контролировать природу, особенно в открытом море.
+Из-за непогоды многие сражения заканчивались неожиданным поражением одной из сторон.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="romanfleet.jpg">
+<div class="card-content">
+<h2>Римский флот и шторм</h2>
+<p>
+Во время одного из морских походов римский флот попал в мощный шторм в Средиземном море.
+Волны разрушали корабли, ломали мачты и уносили солдат в открытое море.
+Командование не смогло спасти большую часть флота из-за силы стихии.
+Это событие стало примером того, как природа может уничтожить даже сильную армию.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="mongols.jpg">
+<div class="card-content">
+<h2>Монголо-татарское нашествие</h2>
+<p>
+Монгольская армия активно использовала природные условия для своих завоеваний.
+Зимой они передвигались по замёрзшим рекам и степям, что ускоряло их походы.
+Суровый климат не мешал им, а наоборот помогал скрытно нападать на города.
+Это делало их армию одной из самых мобильных в истории.
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- 🏰 1500–1900 -->
+<div id="middle" class="section">
+
+<div class="card">
+<img src="usa.jpg">
+<div class="card-content">
+<h2>Война за независимость США</h2>
+<p>
+Американские колонии боролись за независимость от Британской империи.
+Зимой армия Вашингтона пересекла реку Делавэр в тяжёлых погодных условиях.
+Холод и снег не остановили солдат, что позволило провести неожиданную атаку.
+Этот манёвр стал важным поворотным моментом в войне.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="napoleon.jpg">
+<div class="card-content">
+<h2>Наполеон в России (1812)</h2>
+<p>
+Французская армия вторглась в Россию с огромными силами и уверенной победой в планах.
+Однако суровая русская зима изменила ход всей кампании.
+Морозы уничтожали солдат, лошадей и технику, лишая армию боеспособности.
+В результате поход закончился катастрофическим поражением Наполеона.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="armada.jpg">
+<div class="card-content">
+<h2>Испанская армада</h2>
+<p>
+Испания отправила огромный флот для нападения на Англию.
+Однако сильные штормы в Атлантике разрушили большую часть кораблей.
+Плохие погодные условия сделали невозможным выполнение военного плана.
+Это стало одним из самых известных поражений морской истории.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="waterloo.jpg">
+<div class="card-content">
+<h2>Битва при Ватерлоо</h2>
+<p>
+Последняя битва Наполеона проходила в тяжёлых погодных условиях.
+Дождь превратил поле боя в грязь, что замедлило движение войск.
+Артиллерия и кавалерия не могли действовать эффективно.
+Это повлияло на итоговое поражение Наполеона.
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- ⚔️ МИРОВЫЕ ВОЙНЫ -->
+<div id="ww" class="section">
+
+<div class="card">
+<img src="ww1.jpg">
+<div class="card-content">
+<h2>Первая мировая война</h2>
+<p>
+Первая мировая война велась в условиях постоянных дождей и грязи.
+Окопы быстро заполнялись водой, превращаясь в болота.
+Солдаты страдали от холода, сырости и болезней.
+Погода сильно усложняла ведение боевых действий.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="ww2.jpg">
+<div class="card-content">
+<h2>Вторая мировая война</h2>
+<p>
+Во Второй мировой войне погодные условия часто определяли исход операций.
+Сильные морозы на восточном фронте останавливали технику и войска.
+Снег и холод снижали мобильность армий.
+Это особенно повлияло на немецкое наступление.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="moscow.jpg">
+<div class="card-content">
+<h2>Битва за Москву</h2>
+<p>
+Зимой 1941 года немецкая армия столкнулась с экстремальными морозами.
+Техника переставала работать, а солдаты теряли боеспособность.
+Советские войска использовали это преимущество для контрнаступления.
+Погода стала важным фактором победы.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="leningrad.jpg">
+<div class="card-content">
+<h2>Блокада Ленинграда</h2>
+<p>
+Город оказался в полной блокаде и испытывал огромные трудности.
+Зимой Ладожское озеро замерзало, и по льду проходила «Дорога жизни».
+Люди перевозили продовольствие и эвакуировали жителей.
+Погода одновременно помогала и угрожала выживанию города.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="finland.jpg">
+<div class="card-content">
+<h2>Советско-финская война</h2>
+<p>
+Зимняя война проходила в крайне суровых климатических условиях.
+Финские войска использовали снег и леса для маскировки и обороны.
+Холод затруднял действия советской армии.
+Погодные условия дали финнам значительное преимущество.
+</p>
+</div>
+</div>
+
+</div>
+
+<footer style="text-align:center; padding:30px; color:#aaa;">
+Исторический проект • влияние погоды на мировую историю
+</footer>
+
+<script>
+
+function show(id){
+let sections=document.querySelectorAll('.section');
+sections.forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+
+</script>
+
+</body>
+</html>
